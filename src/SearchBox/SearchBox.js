@@ -9,7 +9,7 @@ class SearchBox extends Component {
             <div>
                 <div className="SearchBox">
                     <FontAwesomeIcon icon={faSearch}/>
-                    <input type="text" placeholder="Search term"/>
+                    <input type="text" placeholder="Search term" value={this.props.searchTerm}/>
                 </div>
             </div>
         )
