@@ -9,7 +9,12 @@ class SearchBox extends Component {
             <div>
                 <div className="SearchBox">
                     <FontAwesomeIcon icon={faSearch}/>
-                    <input type="text" placeholder="Search term" value={this.props.searchTerm}/>
+                    <input 
+                        type="text" 
+                        placeholder="Search term"
+                        value={this.props.searchTerm}
+                        onChange={e => this.props.handleUpdate(e.target.value)}
+                    />
                 </div>
             </div>
         )
