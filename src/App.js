@@ -16,6 +16,11 @@ class App extends Component {
       searchTerm: term
     })
   }
+  updateFilterOption(option){
+    this.setState({
+      filterOption: option
+    })
+  }
 
   render() {
     return (
@@ -24,6 +29,7 @@ class App extends Component {
           searchTerm={this.state.searchTerm}
           filterOption={this.state.filterOption}
           handleUpdate={term => this.updateSearchTerm(term)}
+          handleFilterChange={option => this.updateFilterOption(option)}
         />
         <FilterableList
           files={this.props.files}  
